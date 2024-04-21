@@ -6,6 +6,63 @@
     <title>NewsBlog</title>
 </head>
 <body>
-    
+    <header>
+        <h1>News App</h1>
+    </header>
+    <main id="main">
+        <section id="news-list">
+            <div class="pagination">
+                <button id="prev-page" disabled>Previous</button>
+                <button id="next-page">Next</button>
+            </div>
+        </section>
+    </main>
+
+    <template id="news-item-template">
+        <article class="news-item">
+            <h2>{{ title }}</h2>
+            <img src="{{ image }}" alt="{{ title }}">
+            <p>{{ excerpt }}</p>
+            <a href="#" class="view-details">View Details</a>
+        </article>
+    </template>
+
+    <section id="news-details" class="hidden">
+        <h2>{{ title }}</h2>
+        <img src="{{ image }}" alt="{{ title }}">
+        <p>{{ content }}</p>
+
+        <h3>Comments</h3>
+        <ul id="comments-list">
+            </ul>
+
+        <h4>Add Comment</h4>
+        <form id="add-comment-form">
+            <textarea name="comment" id="new-comment" rows="5" placeholder="Enter your comment"></textarea>
+            <button type="submit">Submit Comment</button>
+        </form>
+
+        <form id="edit-comment-form" class="hidden">
+            <input type="hidden" name="commentId">
+            <textarea name="comment" id="edit-comment" rows="5"></textarea>
+            <button type="submit">Update Comment</button>
+            <button type="button" id="delete-comment">Delete</button>
+        </form>
+
+        <button id="back-to-list">Back to List</button>
+    </section>
+
+    <form id="create-news-form">
+        <h2>Create News Article</h2>
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" required>
+        <label for="image">Image URL:</label>
+        <input type="url" name="image" id="image" required>
+        <label for="content">Content:</label>
+        <textarea name="content" id="content" rows="10" required></textarea>
+        <button type="submit">Submit News</button>
+    </form>
+
+    <script src="script.js"></script>
 </body>
 </html>

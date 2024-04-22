@@ -1,4 +1,4 @@
-import { fetchData } from "./data";
+import { fetchData } from "./news.js";
 
 const itemsPerPage = 10;
 let currentPage = 1;

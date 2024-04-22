@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NewsBlog</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -18,14 +19,11 @@
         </section>
     </main>
 
-    <template id="news-item-template">
+    <section id="news-item-template">
         <article class="news-item">
-            <h2>{{ title }}</h2>
-            <img src="{{ image }}" alt="{{ title }}">
-            <p>{{ excerpt }}</p>
-            <a href="#" class="view-details">View Details</a>
+    
         </article>
-    </template>
+    </section>
 
     <section id="news-details" class="hidden">
         <h2>{{ title }}</h2>
@@ -63,6 +61,6 @@
         <button type="submit">Submit News</button>
     </form>
 
-    <script src="script.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

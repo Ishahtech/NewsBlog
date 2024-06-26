@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsBlog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Pareta News Agency</h1>
+    </header>
+    <main id="main">
+        <section id="news-list">
+            <div class="pagination">
+                <button id="prev-page" disabled>Previous</button>
+                <button id="next-page">Next</button>
+            </div>
+        </section>
+    
+
+    <section id="news-item-template">
+        <article class="news-item">
+    
+        </article>
+    </section>
+
+    <form id="create-news-form">
+        <h2>Create News Article</h2> <br> <br>
+        <label for="title">Title:</label>  
+        <input type="text" name="title" id="title" required> <br> <br> <br>
+        <label for="image">Image URL:</label>
+        <input type="url" name="image" id="image" required><br> <br> <br><br>
+        <label for="content">Content:</label> 
+        <textarea name="content" id="content" rows="10" cols="50"></textarea> <br> <br>
+        <button type="submit">Submit News</button>
+    </form>
+</main>
+    <!-- <script src="./details.js" type="module"></script> -->
+    <script src="index.js" type="module"></script>
+    <script src="news.js" type="module" ></script>
+</body>
+</html>
